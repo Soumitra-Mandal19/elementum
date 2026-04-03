@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+/* Fonts */
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/Satoshi-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/Satoshi-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gerbil';
+  src: url('/fonts/gerbil.otf') format('opentype');
+  font-weight: 400;
+  font-display: swap;
+}
+
+/* Tailwind v4 Theme */
+@theme {
+  --font-gerbil: "Gerbil", sans-serif;
+  --font-satoshi: "Satoshi", sans-serif;
+}
+
+/* Base styles */
+body {
+  font-family: 'Satoshi', sans-serif;
+}
+
+.hover-scale-size {
+  @apply transform transition-transform duration-300 hover:scale-105 ;
+}
+
+.hover-scale {
+  @apply transform transition-transform duration-300 hover:scale-105 cursor-pointer;
+}
+
+.hover-scale-bold {
+  @apply transform transition-all duration-300 hover:scale-105 cursor-pointer hover:font-bold;
+}
+
+.hover-scale-color {
+  @apply transform transition-all duration-300 hover:scale-105 hover:text-blue-600 cursor-pointer;
+}
